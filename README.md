@@ -10,7 +10,7 @@
 
 - Document the request & response for each api's. 
 - Ability to get the download the postman request and run from postman application anywhere.
-- [Event Management System - Postman! - Click here](https://documenter.getpostman.com/view/9503816/SWLZfpzV)
+- [Event Management System - Postman! - Click here](https://documenter.getpostman.com/view/9503816/SWLZgW2j)
 
 ## Features
 
