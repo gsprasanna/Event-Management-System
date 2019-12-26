@@ -4,6 +4,10 @@ const { Events } = require("../models/Events");
 const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 
+/*
+  GET request
+  Route will fetch events which are less than or equal to given ticket price.
+*/
 priceRouter.route("/:ticketPrice").get((req, res) => {
   const ticketPrice = req.params.ticketPrice;
   const event = Events.findAll({

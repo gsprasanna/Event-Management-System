@@ -4,6 +4,10 @@ const { Events } = require("../models/Events");
 const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 
+/*
+  POST request
+  Route will fetch events for the given keyword.
+*/
 searchRouter.route("/").post((req, res) => {
   const searchEvent = req.body.searchKeyword;
   const event = Events.findAll({
@@ -13,9 +17,6 @@ searchRouter.route("/").post((req, res) => {
         { category: { [Op.iLike]: "%" + searchEvent + "%" } },
         { organiser: { [Op.iLike]: "%" + searchEvent + "%" } },
         { location: { [Op.iLike]: "%" + searchEvent + "%" } }
-        // { timings: { [Op.iLike]: "%" + searchEvent + "%" } },
-        // { ticketPrice: { [Op.iLike]: "%" + searchEvent + "%" } },
-        // { pinCode: { [Op.iLike]: "%" + searchEvent + "%" } }
       ]
     }
   })

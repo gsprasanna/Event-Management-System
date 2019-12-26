@@ -4,6 +4,10 @@ const { Events } = require("../models/Events");
 const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 
+/*
+  GET request
+  Route will fetch events for the given pincode.
+*/
 pinCodeRouter.route("/:pinCode").get((req, res) => {
   const pinCode = req.params.pinCode;
   const event = Events.findAll({
